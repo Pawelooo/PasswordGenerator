@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="col-12 type">
+    <form method="POST">
+        {% csrf_token %}
+        <ul>
+            <li>
+                <select name="length">
+                    <option >6</option>
+                    <option >7</option>
+                    <option >8</option>
+                    <option >9</option>
+                    <option >10</option>
+                    <option >11</option>
+                    <option >12</option>
+                    <option >13</option>
+                    <option >14</option>
+                </select>
+                <label>Ilość znaków</label>
+            </li>
+            <li>
+                <input type="checkbox" name="uppercase">
+                <label>Duże znaki</label>
+            </li>
+            <li>
+                <input type="checkbox" name="digits">
+                <label>Liczby</label>
+            </li>
+            <li>
+                <input type="checkbox" name="punctuation">
+                <label>Znaki specjalne</label>
+            </li>
+        </ul>
+        <button type="submit">Generuj</button>
+
+    </form>
+</div>
+{% endblock %}
