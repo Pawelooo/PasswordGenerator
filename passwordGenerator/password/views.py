@@ -1,12 +1,11 @@
 import random
 import string
-from urllib import request
 
 from django.forms import Form
 from django.shortcuts import render
 
 
-def main():
+def main(request):
     if request.method == "POST":
         form = Form(request.POST)
         
@@ -29,4 +28,4 @@ def main():
             return render(request, 'password.html',
                           {'password': password_generate})
 
-    return render(request, 'generate.html')
+    return render(request, 'main.html')
