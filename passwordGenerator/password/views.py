@@ -28,4 +28,4 @@ def main(request):
             return render(request, 'password.html',
                           {'password': password_generate})
 
-    return render(request, 'main.html')
+    return render(request, 'generate.html')
